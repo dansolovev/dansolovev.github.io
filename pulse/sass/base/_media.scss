@@ -1,0 +1,232 @@
+@media (max-width: 1200px) {
+    .promo {
+        &__header {
+            font-size: 39px;
+            line-height: 22px;
+        }
+        &__subheader {
+            margin-top: 12px;
+            font-size: 22px;
+        }
+    }
+    .tns-outer {
+        width: 700px;
+        margin: 0 auto;
+    }
+    .carousel {
+        .prev {
+            left: 20px;
+            top: 37%;
+        }
+        .next {
+            right: 20px;
+            top: 37%;
+        }
+        .tns-item {
+            img {
+                width: 700px;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .header {
+        padding: 0 20px;
+    }
+    .promo {
+        &__wrapper {
+            padding: 0 20px;
+        }
+        &__header {
+            font-size: 28px;
+            line-height: 10px;
+        }
+        &__subheader {
+            margin-top: 12px;
+            font-size: 22px;
+        }
+        &__icons {
+            margin-top: 40px;
+        }
+        &_icon {
+            width: 110px;
+            img {
+                height: 40px;
+            }
+        }
+    }
+    .consultation {
+        padding: 100px 20px 108px 20px;
+    }
+    .title {
+        &_left {
+            line-height: 40px;
+            font-size: 32px;
+        }
+    }
+    .tns-outer {
+        width: 580px;
+        margin: 0 auto;
+    }
+    .carousel {
+        .prev {
+            left: 20px;
+        }
+        .next {
+            right: 20px;
+        }
+        .tns-item {
+            img {
+                width: 580px;
+            }
+        }
+    }
+    .catalog {
+        padding: 0 60px 80px 60px;
+    }
+    .reviews {
+        padding: 0 20px;
+    }
+
+}
+@media (max-width: 767px) {
+    .header {
+        &__official {
+            display: none;
+        }
+    }
+    .button_main {
+        margin-bottom: 5px;
+    }
+    .promo {
+        &__wrapper {
+            align-items: center
+        }
+    }
+    .advantages {
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .tns-outer {
+        width: 580px;
+        margin: 0 auto;
+    }
+    .carousel {
+        .prev, .next {
+            display: none;
+        }
+        .tns-item {
+            img {
+                width: 540px;
+            }
+        }
+    }
+    .catalog {
+        &__content {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .reviews {
+        &__item {
+            flex-direction: column;
+            align-items: center;
+            &__content {
+                text-align: center;
+                margin-left: 0;
+                width: 400px;
+            }
+        }
+        &__name {
+            margin-top: 15px;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        &__contacts {
+            display: none;
+        }
+    }
+    .button_main {
+        width: 270px;
+        height: 45px;
+    }
+    .promo {
+        &__header {
+            font-size: 21px;
+        }
+        &__subheader {
+            font-size: 16px;
+            text-align: center;
+        }
+        &__icons {
+            flex-direction: column;
+            align-items: center;
+        }
+        &_icon {
+            margin-top: 15px;
+        }
+    }
+    .consultation {
+        padding: 50px 15px 80px 15px;
+    }
+    .title {
+        &_left {
+            line-height: 40px;
+            font-size: 32px;
+        }
+    }
+    .feed-form {
+        width: 285px;
+    }
+    .tns-outer {
+        width: 300px;
+    }
+    .carousel {
+        .tns-item {
+            img {
+                width: 300px;
+            }
+        }
+    }
+    .catalog {
+        &__tabs {
+            flex-direction: column;
+        }
+        &__tab {
+            margin-top: 10px;
+        }
+        .title {
+            font-size: 23px;
+        }
+        &__content {
+            justify-content: center;
+        }
+        &-item {
+            width: 270px;
+        }
+    }
+    .reviews {
+        &__item {
+            &__content {
+                width: 300px;
+            }
+        }
+    }
+    .modal {
+        width: 280px;
+        padding: 25px 30px 30px 20px;
+        &__close {
+            font-size: 31px;
+            right: 5px;
+        }
+    }
+    .feed-form {
+        width: 240px;
+    }
+}
