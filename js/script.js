@@ -21,3 +21,17 @@ function initAcc(elem, option){
 
 initAcc('.accordion.v1', true);
 initAcc('.accordion.v2', false);
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+      // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-btn-next',
+    prevEl: '.swiper-btn-prev',
+  },
+  });
