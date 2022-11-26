@@ -22,3 +22,16 @@ window.addEventListener("scroll", function() {
     const nav = document.querySelector(".navigation");
     nav.classList.toggle("navigation_sticky", window.scrollY > 100);
 });
+
+var isThemeLight = true
+function changeTheme() {
+    
+console.log('a')
+  if (isThemeLight) {
+    document.body.setAttribute('dark', '');
+    isThemeLight = false
+  } else {
+    document.body.removeAttribute('dark');
+    isThemeLight = true
+  }
+}
