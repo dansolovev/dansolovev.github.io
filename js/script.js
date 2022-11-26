@@ -1,37 +1,24 @@
-// Accordion
+// Гамбургер
+window.addEventListener('DOMContentLoaded', () => {
+    const menu = document.querySelector('.menu'),
+    menuItem = document.querySelectorAll('.menu_item'),
+    hamburger = document.querySelector('.hamburger');
 
-function initAcc(elem, option){
-    document.addEventListener('click', function (e) {
-        if (!e.target.matches(elem+' .a-btn')) return;
-        else{
-            if(!e.target.parentElement.classList.contains('active')){
-                if(option==true){
-                    var elementList = document.querySelectorAll(elem+' .a-container');
-                    Array.prototype.forEach.call(elementList, function (e) {
-                        e.classList.remove('active');
-                    });
-                }            
-                e.target.parentElement.classList.add('active');
-            }else{
-                e.target.parentElement.classList.remove('active');
-            }
-        }
+    hamburger.addEventListener('click', () => {
+        console.log('asd');
+        hamburger.classList.toggle('hamburger_active');
+        menu.classList.toggle('menu_active');
     });
-}
 
-initAcc('.accordion.v1', true);
-initAcc('.accordion.v2', false);
+    menuItem.forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.toggle('hamburger_active');
+            menu.classList.toggle('menu_active');
+        });
+    });
+});
 
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 30,
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   clickable: true,
-    // },
-      // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-btn-next',
-    prevEl: '.swiper-btn-prev',
-  },
-  });
+window.addEventListener("scroll", function() {
+    const nav = document.querySelector(".navigation");
+    nav.classList.toggle("navigation_sticky", window.scrollY > 100);
+});
