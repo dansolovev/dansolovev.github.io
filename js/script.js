@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener("scroll", function() {
     const nav = document.querySelector(".navigation");
-    nav.classList.toggle("navigation_sticky", window.scrollY > 100);
+    nav.classList.toggle("navigation_sticky", window.scrollY > 150);
 });
 
 var isThemeLight = true
