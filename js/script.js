@@ -172,6 +172,6 @@ categoriesBtns.forEach(item => {
     setTimeout(() => {
       document.querySelector('.loading-layer').style.display = 'none'
       window.open("categories.html","_self")
-    }, "1000")
+    }, "700")
   });
 });
