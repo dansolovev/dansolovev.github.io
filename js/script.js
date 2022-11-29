@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     hamburger = document.querySelector('.hamburger');
 
     hamburger.addEventListener('click', () => {
-        console.log('asd');
+        // console.log('asd');
         hamburger.classList.toggle('hamburger_active');
         menu.classList.toggle('menu_active');
     });
@@ -26,7 +26,7 @@ window.addEventListener("scroll", function() {
 var isThemeLight = true
 function changeTheme() {
     
-console.log('a')
+// console.log('a')
   if (isThemeLight) {
     document.body.setAttribute('dark', '');
     isThemeLight = false
@@ -53,7 +53,7 @@ if (trackPagePlayBtn) {
     e.preventDefault()
     setInterval(currentTime, 1000);
     bottomPlayBtn.classList.toggle('play_pause');
-    console.log("plaay")
+    // console.log("plaay")
     if (radio.paused == true) {
       radio.play();
       currItem.classList.toggle('play_pause');
@@ -69,7 +69,7 @@ bottomPlayBtn.addEventListener('click', function (e) {
   e.preventDefault()
   setInterval(currentTime, 1000);
   bottomPlayBtn.classList.toggle('play_pause');
-  console.log("plaay")
+  // console.log("plaay")
   if (radio.paused == true) {
     radio.play();
     currItem.classList.toggle('play_pause');
@@ -84,7 +84,7 @@ playBtns.forEach(item => {
     setInterval(currentTime, 1000);
     e.preventDefault()
     document.querySelector('.bottom_player__play').classList.toggle('play_pause');
-    console.log("plaay")
+    // console.log("plaay")
     currItem = item
     if (radio.paused == true) {
       radio.play();
@@ -138,8 +138,8 @@ downloadURI("mirvok.mp3", "mirvok")
 // }
 
 function currentTime() {
-  console.log(radio.duration)
-  console.log(radio.currentTime)
+  // console.log(radio.duration)
+  // console.log(radio.currentTime)
   const percent = radio.currentTime / radio.duration
   document.querySelector('.bottom_player__track-fill').style.width = 100 * percent + "%"
 }
@@ -155,3 +155,15 @@ function downloadURI(uri, name)
     link.click();
     link.remove();
 }
+
+const categoriesBtns = document.querySelectorAll('.categoriesLink')
+categoriesBtns.forEach(item => {
+  item.addEventListener('click', function (e) {
+    e.preventDefault()
+    document.querySelector('.loading-layer').style.display = 'block'
+    setTimeout(() => {
+      document.querySelector('.loading-layer').style.display = 'none'
+      window.open("categories.html","_self")
+    }, "1000")
+  });
+});
