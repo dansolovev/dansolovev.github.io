@@ -46,6 +46,9 @@ const tracksDownloadBtns = document.querySelectorAll('.tracks__item-download');
 const trackPageDownloadBtns = document.querySelectorAll('.btn_track-page-download');
 const bottomPlayBtn = document.querySelector('.bottom_player__play');
 const trackPagePlayBtn = document.querySelector('.btn_track-page-listen');
+const volumeBtn = document.querySelector('.bottom_player-speaker');
+
+
 var currItem = playBtns[0];
 if (trackPagePlayBtn) {
   currItem = trackPagePlayBtn
@@ -125,23 +128,28 @@ downloadURI("mirvok.mp3", "mirvok")
   });
 });
 
-// document.querySelectorAll('.play-btn').onclick = function() {
-//   /* проверяем если музыка не на паузе воспроизводим*/
-//   if (radio.paused == true) {
-//     radio.play();
-//     document.querySelector('.radioPlay').innerHTML = 'pause';
-
-//   } else {
-//     radio.pause();
-//     document.querySelector('.radioPlay').innerHTML = 'play';
-//   }
-// }
+var volume = true
+volumeBtn.addEventListener('click', function (e) {
+e.preventDefault()
+volumeBtn.classList.toggle('play_pause');
+if (volume) {
+  radio.volume = 0
+  volume = false
+} else {
+  radio.volume = 1
+  volume = true
+}
+});
 
 function currentTime() {
   // console.log(radio.duration)
-  // console.log(radio.currentTime)
+  var str = String(Math.round(radio.currentTime))
+  if (str.length == 1) {
+    str = "0" + str
+  }
   const percent = radio.currentTime / radio.duration
   document.querySelector('.bottom_player__track-fill').style.width = 100 * percent + "%"
+  document.querySelector('.bottom_player-time').innerHTML = '0:' + str;
 }
 
 function downloadURI(uri, name) 
